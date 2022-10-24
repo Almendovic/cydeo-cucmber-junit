@@ -10,3 +10,9 @@ Feature: Library app login feature
   Scenario: Login as librarian
 
     When user enters librarian username
+    And users enters librarian password
+    Then user should see the dashboard
+
+    Scenario: Login as student
+      When user enters student username
+      And user enters student password
