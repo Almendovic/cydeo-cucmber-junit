@@ -8,7 +8,7 @@ import io.cucumber.java.BeforeStep;
 //In this class will be able to pass pre& post conditions to each scenario and each step
 public class Hooks {
 
-   @Before // import from io.cucumber.java
+   @Before (order = 1)// import from io.cucumber.java
     public void setupScenario() {
 
        System.out.println("====Setting up browser using cucumber @Before");
