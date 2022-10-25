@@ -1,4 +1,4 @@
-@Regression
+@Regression @smoke @login
 
 Feature: Library app login feature
 
