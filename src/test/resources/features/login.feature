@@ -15,7 +15,7 @@ Feature: Library app login feature
 
 
 
-@Librarian @employee @wip
+@Librarian @employee
     Scenario: Login as librarian
     When user enters librarian username
     And users enters librarian password
