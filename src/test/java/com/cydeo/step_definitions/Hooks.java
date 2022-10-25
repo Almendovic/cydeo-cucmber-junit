@@ -30,11 +30,13 @@ public class Hooks {
     @After
     public void tearDownScenario(Scenario scenario){
 
+       //scenario.isFailed().--> scenario fails this method will return true booelan value
+       if(scenario.isFailed()) {
 
+           byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+           scenario.attach(screenshot, "image/png", scenario.getName());
 
-       byte [] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-       scenario.attach(screenshot,"image/png",scenario.getName());
-
+       }
 
 
 
