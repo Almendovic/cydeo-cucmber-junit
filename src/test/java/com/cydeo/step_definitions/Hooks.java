@@ -31,6 +31,12 @@ public class Hooks {
     @After
     public void tearDownScenario(){
 
+       byte [] screenshot =
+
+
+
+
+
         Driver.closeDriver();
 
 
