@@ -2,6 +2,7 @@
 /Users/Alen/IdeaProjects/cydeo-cucmber-junit/src/test/java/com/cydeo/step_definitions/Login_StepDefinitions.java
 /Users/Alen/IdeaProjects/cydeo-cucmber-junit/src/test/java/com/cydeo/pages/GoogleSearchPage.java
 /Users/Alen/IdeaProjects/cydeo-cucmber-junit/src/test/java/com/cydeo/utilities/Driver.java
+/Users/Alen/IdeaProjects/cydeo-cucmber-junit/src/test/java/com/cydeo/step_definitions/DataTable_StepDefinitions.java
 /Users/Alen/IdeaProjects/cydeo-cucmber-junit/src/test/java/com/cydeo/runners/CukesRunner.java
 /Users/Alen/IdeaProjects/cydeo-cucmber-junit/src/test/java/com/cydeo/step_definitions/GoogleStepDefinitions.java
 /Users/Alen/IdeaProjects/cydeo-cucmber-junit/src/test/java/com/cydeo/utilities/BrowserUtils.java

@@ -2,7 +2,6 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.WikiSearchPage;
 import com.cydeo.utilities.Driver;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -32,5 +31,11 @@ public class Wiki_StepDefinitions {
     }
 
 
+    @Then("User sees {string} is in the main header")
+    public void userSeesSteveJobsIsInTheMainHeader(String string) {
 
+      Assert.assertTrue(wikiSearchPage.mainHeader.isDisplayed());
+
+      Assert.assertTrue(wikiSearchPage.mainHeader.getText().equals(string));
+    }
 }
