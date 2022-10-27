@@ -22,10 +22,14 @@ Feature: Wikipedia search functionality and verification
     Then User sees "<expectedTitle>" is in the wiki title
     Then User sees "<expectedMainHeader>" is in the main header
 
+    @Entrepreneurs
     Examples: search values we are going to be using in this scenario is as below
       | searchValue       | expectedTitle      | expectedMainHeader |
       | Steve Jobs        | Steve Jobs         | Steve Jobs         |
       | Cristiano Ronaldo | Cristiano Ronaldo | Cristiano Ronaldo  |
+
+     @actors
+      Examples:
       | Bob Marley        | Bob Marley         | Bob Marley         |
       | Antony Hopkins    | Antony Hopkins     | Antony Hopkins     |
       | Lady Gaga         | Lady Gaga          | Lady Gaga          |
