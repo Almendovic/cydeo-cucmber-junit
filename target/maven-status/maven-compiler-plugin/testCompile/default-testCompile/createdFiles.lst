@@ -10,3 +10,4 @@ com/cydeo/step_definitions/Login_StepDefinitions.class
 com/cydeo/step_definitions/Wiki_Step_Definitions.class
 com/cydeo/utilities/Driver.class
 com/cydeo/pages/GoogleSearchPage.class
+com/cydeo/step_definitions/WebTable_StepDefinitions.class
