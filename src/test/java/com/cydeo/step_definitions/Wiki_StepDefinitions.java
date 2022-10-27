@@ -2,9 +2,11 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.WikiSearchPage;
 import com.cydeo.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class Wiki_StepDefinitions {
 
@@ -24,6 +26,11 @@ public class Wiki_StepDefinitions {
     }
     @Then("User sees {string} is in the wiki title")
     public void user_sees_is_in_the_wiki_title(String string) {
+        //verify actual title contains string(coming from feature file)
+        Assert.assertTrue(Driver.getDriver().getTitle().contains(string) );
 
     }
+
+
+
 }
