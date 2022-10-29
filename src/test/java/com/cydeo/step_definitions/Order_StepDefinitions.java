@@ -1,62 +1,74 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.BasePage;
+import com.cydeo.pages.WebTableLoginPage;
+import com.cydeo.utilities.ConfigurationReader;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Order_StepDefinitions {
+WebTableLoginPage webTableLoginPage=new WebTableLoginPage();
+BasePage basePage= new BasePage();
 
 
     @Given("user is already logged in and on order page")
-    public void userIsAlreadyLoggedInAndOnOrderPage() {
-    }
+    public void user_is_already_logged_in_and_on_order_page() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("webTableUrl"));
+        //Calling out login method to log in to web table app
+        webTableLoginPage.login();
+         //clicking to "order" link to go order page
+        basePage.order.click();
 
+    }
     @When("user selects product type {string}")
-    public void userSelectsProductType(String arg0) {
-    }
+    public void user_selects_product_type(String string) {
 
-    @And("user enters quantity {int}")
-    public void userEntersQuantity(int arg0) {
     }
+    @When("user enters quantity {int}")
+    public void user_enters_quantity(Integer int1) {
 
-    @And("user enters customer name {string}")
-    public void userEntersCustomerName(String arg0) {
     }
+    @When("user enters customer name {string}")
+    public void user_enters_customer_name(String string) {
 
-    @And("user enters street {string}")
-    public void userEntersStreet(String arg0) {
     }
+    @When("user enters street {string}")
+    public void user_enters_street(String string) {
 
-    @And("user enters city {string}")
-    public void userEntersCity(String arg0) {
     }
+    @When("user enters city {string}")
+    public void user_enters_city(String string) {
 
-    @And("user enters state {string}")
-    public void userEntersState(String arg0) {
     }
+    @When("user enters state {string}")
+    public void user_enters_state(String string) {
 
-    @And("user enters zipcode {string}")
-    public void userEntersZipcode(String arg0) {
     }
+    @When("user enters zipcode {string}")
+    public void user_enters_zipcode(String string) {
 
-    @And("user selects credit card type {string}")
-    public void userSelectsCreditCardType(String arg0) {
     }
+    @When("user selects credit card type {string}")
+    public void user_selects_credit_card_type(String string) {
 
-    @And("user enters credit card number {string}")
-    public void userEntersCreditCardNumber(String arg0) {
     }
+    @When("user enters credit card number {string}")
+    public void user_enters_credit_card_number(String string) {
 
-    @And("user enters expiry date {string}")
-    public void userEntersExpiryDate(String arg0) {
     }
+    @When("user enters expiry date {string}")
+    public void user_enters_expiry_date(String string) {
 
-    @And("user enters process order button")
-    public void userEntersProcessOrderButton() {
     }
+    @When("user enters process order button")
+    public void user_enters_process_order_button() {
 
+    }
     @Then("user should see {string} in first row of the web table")
-    public void userShouldSeeInFirstRowOfTheWebTable(String arg0) {
+    public void user_should_see_in_first_row_of_the_web_table(String string) {
+
     }
 }

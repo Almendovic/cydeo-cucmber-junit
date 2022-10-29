@@ -1,7 +1,10 @@
 Feature: Web table user order feature
 
-  Scenario: User should be able to place order and order seen in web table
+
+
   @wip
+  Scenario: User should be able to place order and order seen in web table
+
     Given user is already logged in and on order page
     When user selects product type "Familybea"
     And user enters quantity 2
