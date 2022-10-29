@@ -33,5 +33,19 @@ public class OrderPage extends BasePage{
     @FindBy(name = "zip")
     public WebElement inputZip;
 
+    @FindBy(xpath = "//label[normalize-space()='American Express']")
+    public WebElement inputCardType;
+
+    @FindBy(name = "cardNo")
+    public WebElement inputCardNumber;
+
+    @FindBy(name = "cardExp")
+    public WebElement inputCardExpiration;
+
+    @FindBy(xpath = "//button[.='Process Order']")
+    public  WebElement submitButton;
+
+    @FindBy(xpath = "(//td[1])[1]")
+    public WebElement FirstRow;
 
 }
