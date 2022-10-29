@@ -20,7 +20,7 @@ Feature: User should be able to login using correct credentials
   # this login method should have multiple different overloaded version
 
 
-  @wip
+
   Scenario: User should be able to see all 12 months in months dropdown
     When user enters below credentials
       | username     | Test   |
