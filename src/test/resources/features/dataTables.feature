@@ -12,7 +12,7 @@ Feature: Examples of Cucumber data table implementations
 
     #mac: command +option+l
 
-  @wip
+
   Scenario: User should be able to see all 12 months in months
   dropdown
     Given User is on the dropdowns page of practice tool
