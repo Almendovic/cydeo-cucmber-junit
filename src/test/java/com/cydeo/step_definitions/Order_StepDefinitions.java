@@ -106,7 +106,7 @@ ViewAllOrdersPage viewAllOrdersPage =new ViewAllOrdersPage();
     @Then("user should see {string} in first row of the web table")
     public void user_should_see_in_first_row_of_the_web_table(String string) {
 
-        System.out.println("viewAllOrdersPage.newCostumerCell.getText() = " + viewAllOrdersPage.newCostumerCell.getText());
+
 
         String name="Sherlock Holmes";
 
