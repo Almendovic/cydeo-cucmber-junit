@@ -45,12 +45,12 @@ public class Hooks {
 //        System.out.println("===Scenario ended/ Take screenshot if failed!===");
     }
 
-    @BeforeStep
+  //  @BeforeStep
     public void setupStep(){
         System.out.println("====Applying setup using @BeforeStep");
     }
 
-    @AfterStep
+  //  @AfterStep
     public void afterStep(){
         System.out.println("=====Applying tear down using @AfterStep");
     }
