@@ -19,7 +19,7 @@ BasePage basePage= new BasePage();
 
 OrderPage orderPage=new OrderPage();
 Faker faker =new Faker();
-ViewAllOrdersPage viewAllOrdersPage =new ViewAllOrdersPage();
+
 
 
 
