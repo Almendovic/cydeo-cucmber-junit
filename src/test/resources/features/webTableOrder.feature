@@ -7,7 +7,7 @@ Feature: Web table user order feature
 
     Given user is already logged in and on order page
     When user selects product type "Familybea"
-    And user enters quantity "2"
+    And user enters quantity 2
     And user enters customer name "Sherlock Holmes"
     And user enters street "221B Baker Street"
     And user enters city "London"
@@ -24,7 +24,7 @@ Feature: Web table user order feature
 
     Given user is already logged in and on order page
     When user selects product type "<productType>"
-   # And user enters quantity <quantity>
+    And user enters quantity <quantity>
     And user enters customer name "<customerName>"
     And user enters street "<street>"
     And user enters city "<city>"
@@ -37,9 +37,8 @@ Feature: Web table user order feature
     Then user should see "<expectedName>" in first row of the web table
 
     Examples: Famous female scientists
-      | productType | customerName | street    | city   | state   | zipcode | cardType | cardNumber       | expDate | expectedName |
-      | MoneyCog    | Marie Curie  | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Marie Curie  |
-      | MoneyCog    | Marie Curie  | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Marie Curie  |
-      | MoneyCog    | Marie Curie  | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Marie Curie  |
-      | MoneyCog    | Marie Curie  | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Marie Curie  |
-      | MoneyCog    | Marie Curie  | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Marie Curie  |
+      | productType | quantity | customerName      | street    | city   | state   | zipcode | cardType | cardNumber       | expDate | expectedName      |
+      | MoneyCog    | 2        | Rosalind Franklin | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Rosalind Franklin |
+      | Screenable  | 4        | Lisa Meither      | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Lisa Meither      |
+      | MoneyCog    | 5        | Chien-Shiung Wu   | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Chien-Shiung Wu   |
+      | MoneyCog    | 6        | Barbara Mclintock | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Barbara Mclintock |

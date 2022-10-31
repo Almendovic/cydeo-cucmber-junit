@@ -40,12 +40,12 @@ Faker faker =new Faker();
         select.selectByVisibleText(string);
 
     }
-    @When("user enters quantity {string}")
-    public void user_enters_quantity(String string) {
+    @When("user enters quantity {int}")
+    public void user_enters_quantity(int arg0) {
 
        // orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); todo more reliable than clear
         orderPage.inputQuantity.clear();
-        orderPage.inputQuantity.sendKeys(string);
+        orderPage.inputQuantity.sendKeys(arg0+"");
 
 
 
