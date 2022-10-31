@@ -98,18 +98,18 @@ Faker faker =new Faker();
 
     }
     @Then("user should see {string} in first row of the web table")
-    public void user_should_see_in_first_row_of_the_web_table(String string) {
+    public void user_should_see_in_first_row_of_the_web_table(String expectedName) {
+
+        String  actualName=orderPage.FirstRow.getText();
+        Assert.assertEquals(expectedName,actualName);
 
 
+       // String name="Sherlock Holmes";
 
-        String name="Sherlock Holmes";
-
-        Assert.assertEquals(orderPage.FirstRow.getText(),name);
+     //   Assert.assertEquals(orderPage.FirstRow.getText(),name);
 
 
     }
 
-    @And("user enters quantity <quantity>")
-    public void userEntersQuantityQuantity() {
-    }
+
 }
