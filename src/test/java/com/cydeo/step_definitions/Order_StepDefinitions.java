@@ -2,10 +2,12 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.BasePage;
 import com.cydeo.pages.OrderPage;
+import com.cydeo.pages.ViewAllOrdersPage;
 import com.cydeo.pages.WebTableLoginPage;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,6 +25,8 @@ WebTableLoginPage webTableLoginPage=new WebTableLoginPage();
 BasePage basePage= new BasePage();
 
 OrderPage orderPage=new OrderPage();
+Faker faker =new Faker();
+ViewAllOrdersPage viewAllOrdersPage =new ViewAllOrdersPage();
 
 
 
@@ -81,6 +85,8 @@ OrderPage orderPage=new OrderPage();
     public void user_selects_credit_card_type(String expectedCardType) {
         //This line will loop through the list and decide which radio button to click
         BrowserUtils.clickRadioButton(orderPage.cardtype,expectedCardType);
+
+
     }
     @When("user enters credit card number {string}")
     public void user_enters_credit_card_number(String string) {
@@ -99,6 +105,8 @@ OrderPage orderPage=new OrderPage();
     }
     @Then("user should see {string} in first row of the web table")
     public void user_should_see_in_first_row_of_the_web_table(String string) {
+
+        System.out.println("viewAllOrdersPage.newCostumerCell.getText() = " + viewAllOrdersPage.newCostumerCell.getText());
 
         String name="Sherlock Holmes";
 
