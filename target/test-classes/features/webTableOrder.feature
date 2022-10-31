@@ -38,7 +38,7 @@ Feature: Web table user order feature
 
     Examples: Famous female scientists
       | productType | quantity | customerName      | street    | city   | state   | zipcode | cardType | cardNumber       | expDate | expectedName      |
-      | MoneyCog    | 2        | Rosalind Franklin | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Rosalind Franklin |
+      | MoneyCog    | 2        | Rosalind Franklins | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Rosalind Franklin |
       | Screenable  | 4        | Lisa Meither      | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Lisa Meither      |
       | MoneyCog    | 5        | Chien-Shiung Wu   | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Chien-Shiung Wu   |
       | MoneyCog    | 6        | Barbara Mclintock | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Barbara Mclintock |
