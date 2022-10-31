@@ -10,7 +10,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.security.Key;
+import java.util.List;
 
 public class Order_StepDefinitions {
 WebTableLoginPage webTableLoginPage=new WebTableLoginPage();
@@ -38,6 +43,8 @@ OrderPage orderPage=new OrderPage();
     }
     @When("user enters quantity {string}")
     public void user_enters_quantity(String string) {
+
+       // orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); todo more reliable than clear
         orderPage.inputQuantity.clear();
         orderPage.inputQuantity.sendKeys(string);
 
@@ -70,8 +77,16 @@ OrderPage orderPage=new OrderPage();
 
     }
     @When("user selects credit card type {string}")
-    public void user_selects_credit_card_type(String string) {
-         orderPage.inputCardType.sendKeys(string);
+    public void user_selects_credit_card_type(String expectedCardType) {
+       List<WebElement> cardTypes=orderPage.cardtype;
+
+        for (WebElement each : cardTypes) {
+
+            if(each.getAttribute("value").equalsIgnoreCase(expectedCardType)){
+                each.click();
+            }
+
+        }
     }
     @When("user enters credit card number {string}")
     public void user_enters_credit_card_number(String string) {

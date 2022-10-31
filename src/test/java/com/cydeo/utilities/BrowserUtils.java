@@ -12,14 +12,13 @@ import java.util.List;
 import java.util.Set;
 
 public class BrowserUtils {
-    public static void sleep(int second){
-        second*=1000;
-        try{
+    public static void sleep(int second) {
+        second *= 1000;
+        try {
             Thread.sleep(second);
-        }catch(InterruptedException e){
+        } catch (InterruptedException e) {
 
         }
-
 
 
     }
@@ -29,13 +28,13 @@ public class BrowserUtils {
     //arg2:expected InUrl : for verify if the url contains given String
     //if conditions is true it will break the loop
     //arr3 expectedTitle will be compared to actualTitle
-    public static void switchWindownAndVerify( String expectedInUrl, String expectedInTitle) {
+    public static void switchWindownAndVerify(String expectedInUrl, String expectedInTitle) {
         Set<String> allWindowshandles = Driver.getDriver().getWindowHandles();
         for (String each : allWindowshandles) {
             Driver.getDriver().switchTo().window(each);
             System.out.println("Current URL: " + Driver.getDriver().getCurrentUrl());
 
-            if(Driver.getDriver().getCurrentUrl().contains("etsy")){
+            if (Driver.getDriver().getCurrentUrl().contains("etsy")) {
                 break;
             }
 
@@ -46,30 +45,28 @@ public class BrowserUtils {
         //lines to be pasted
         String actualTitle = Driver.getDriver().getTitle();
 
-        Assert.assertTrue("Title verification failed!",actualTitle.contains(expectedInTitle));
+        Assert.assertTrue("Title verification failed!", actualTitle.contains(expectedInTitle));
     }
 
     //this method accepts a String "expectedTitle " and assers if it is true
-    public static void verifyTitle(String expectedTitle){
-        Assert.assertEquals(expectedTitle,Driver.getDriver().getTitle());
+    public static void verifyTitle(String expectedTitle) {
+        Assert.assertEquals(expectedTitle, Driver.getDriver().getTitle());
     }
 
-    public static void waitForInvisibilityOf (WebElement element){
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),15);
+    public static void waitForInvisibilityOf(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 15);
         wait.until(ExpectedConditions.invisibilityOf(element));
 
 
-
-
     }
-    /**This Method will verify if current URL contains expected value
-     * @param expectedInUrl
+
+    /**
+     * This Method will verify if current URL contains expected value
      *
-    */
-    public static void verifyURLContains(String expectedInUrl){
+     * @param expectedInUrl
+     */
+    public static void verifyURLContains(String expectedInUrl) {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInUrl));
-
-
 
 
     }
@@ -77,20 +74,19 @@ public class BrowserUtils {
     /**
      * This method will accept a dropdown as a Webelemnt
      * and return all of hte options 'text in a List of String
-     * @param  dropdownElement
+     *
+     * @param dropdownElement
      * @return List<String> actualOptionsAsString
-
      */
 
-    public static List<String >dropdownOptionsAsString(WebElement dropdownElement){
+    public static List<String> dropdownOptionsAsString(WebElement dropdownElement) {
 
 
+        Select select = new Select(dropdownElement);
 
-        Select select= new Select(dropdownElement);
+        List<WebElement> actualOptionsAsWebElement = select.getOptions();
 
-        List<WebElement>actualOptionsAsWebElement=select.getOptions();
-
-        List<String > actualOptionsAsString=new ArrayList<>();
+        List<String> actualOptionsAsString = new ArrayList<>();
 
         for (WebElement each : actualOptionsAsWebElement) {
 
@@ -98,11 +94,24 @@ public class BrowserUtils {
 
 
         }
-        return  actualOptionsAsString;
+        return actualOptionsAsString;
 
     }
 
+    public static void clickRadioButton(List<WebElement>radioButtons,String attributeValue) {
 
+
+
+        for (WebElement each : radioButtons) {
+
+            if (each.getAttribute("value").equalsIgnoreCase(attributeValue)) {
+                each.click();
+            }
+
+        }
+
+
+    }
 
 
 }
