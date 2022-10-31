@@ -7,6 +7,7 @@ import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -106,5 +107,9 @@ Faker faker =new Faker();
         Assert.assertEquals(orderPage.FirstRow.getText(),name);
 
 
+    }
+
+    @And("user enters quantity <quantity>")
+    public void userEntersQuantityQuantity() {
     }
 }
