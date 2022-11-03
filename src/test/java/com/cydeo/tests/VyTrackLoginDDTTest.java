@@ -33,7 +33,7 @@ public class VyTrackLoginDDTTest {
     }
 
     @Test
-    public void loginDDTTest() throws IOException {
+    public void loginDDTTest() throws IOException, InterruptedException {
 
         String filePath="VyTrackQa2Users.xlsx";
         FileInputStream in =new FileInputStream(filePath);
@@ -41,7 +41,7 @@ public class VyTrackLoginDDTTest {
         XSSFSheet sheet= workbook.getSheet("data");
 
 
-        for (int i=1;i< sheet.getLastRowNum();i++){
+        for (int i=1;i<=sheet.getLastRowNum();i++){
             String userName=sheet.getRow(i).getCell(0).toString();
             String password=sheet.getRow(i).getCell(1).toString();
             String firstName=sheet.getRow(i).getCell(2).toString();
@@ -50,6 +50,7 @@ public class VyTrackLoginDDTTest {
             loginPage.login(userName,password);
 
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
+            Thread.sleep(5000);
             wait.until(ExpectedConditions.visibilityOf(dashboardPage.fullName));
 
             String actualFullname=dashboardPage.fullName.getText();
