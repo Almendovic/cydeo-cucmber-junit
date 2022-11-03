@@ -15,7 +15,7 @@ public class ExcelRead {
 
      String path="SampleData.xlsx";
 
-     // to rread from excel we need to load in to FileInput Stream
+     // to read from excel we need to load in to FileInput Stream
 
      FileInputStream fileInputStream=new FileInputStream(path);
 
@@ -30,7 +30,7 @@ public class ExcelRead {
 
      //<3> Select row and cell
      // Print out many cells
-     //INdexex start from 0
+     //Index start from 0
 
      System.out.println(sheet.getRow(1).getCell(0));
 
@@ -46,7 +46,7 @@ public class ExcelRead {
      System.out.println(usedRows);
 
      //Return the number from top cell to bottom cell
-     //It doent care if the cell is empty or not
+     //It doesn't care if the cell is empty or not
 
      //Starts counting from 0
 
@@ -55,13 +55,21 @@ public class ExcelRead {
      System.out.println(lastusedRow);
 
 
-     // todo: CReate a logic to print Vinods' name
+     // todo: Create a logic to print Vinod's' name
          for (int rowNum=0; rowNum<usedRows;rowNum++){
 
              if(sheet.getRow(rowNum).getCell(0).toString().equals("Vinod")){
                  System.out.println(sheet.getRow(rowNum).getCell(0));
              }
          }
+
+         //todo : Create a logic to print out Linda's Job_ID
+     //Check if name is Linda--> print out Job_ID of Linda
+     for (int rowNum=0; rowNum<usedRows;rowNum++){
+         if(sheet.getRow(rowNum).getCell(0).toString().equals("Linda")){
+             System.out.println("Linda job id is"+sheet.getRow(rowNum).getCell(2));
+         }
+     }
 
 
 
