@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: Wikipedia search functionality and verification
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 172.224 s <<< FAILURE! - in Wikipedia search functionality and verification
-Wikipedia search functionality and verification.Wikipedia Search Functionality Title Verification #4  Time elapsed: 33.223 s  <<< FAILURE!
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 167.464 s <<< FAILURE! - in Wikipedia search functionality and verification
+Wikipedia search functionality and verification.Wikipedia Search Functionality Title Verification #4  Time elapsed: 24.404 s  <<< FAILURE!
 java.lang.AssertionError
 
-Wikipedia search functionality and verification.Wikipedia Search Functionality Title Verification #5  Time elapsed: 19.358 s  <<< FAILURE!
+Wikipedia search functionality and verification.Wikipedia Search Functionality Title Verification #5  Time elapsed: 20.083 s  <<< FAILURE!
 java.lang.AssertionError
 

@@ -284,7 +284,7 @@ How do you use external data? Can you explain step by step?
     - EXCEL : using APACHE POI
 
 Can you explain BDD steps?
-
+v
 -----
 
 tell me about your framework
@@ -292,7 +292,7 @@ tell me about your framework
 - I used java as my programming language in my framework.
 - I used Selenium to automate my browsers.
 - I used maven as my build automation tool. which has pom.xml file that allows me to manage my dependencies/versions easily.
-- I used Page Object Model to simplify managing and maintaing my framework for myself and my team.
+- I used Page Object Model to simplify managing and maintains my framework for myself and my team.
 - this design pattern allows me to locate web elements only once, in their respective classes.
 - so that if there are any problems with any web elements, I know exactly where to go and how to fix it.
 - I created Singleton Design Pattern to allow my framework to pass the same instance of my webdriver in one session.

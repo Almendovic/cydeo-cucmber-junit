@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Google search functionality
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 149.298 s - in Google search functionality
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 132.303 s - in Google search functionality
