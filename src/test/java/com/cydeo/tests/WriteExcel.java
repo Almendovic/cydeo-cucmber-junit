@@ -41,6 +41,15 @@ public class WriteExcel {
        salary4.setCellValue(130000);
 
 
+       //todo change Mary's last name to Jones
+
+      for(int rowNum=0;rowNum<sheet.getLastRowNum();rowNum++){
+         if(sheet.getRow(rowNum).getCell(0).toString().equals("Mary")){
+            sheet.getRow(rowNum).getCell(1).setCellValue("Jones");
+         }
+      }
+
+
        //open to write to the file:FileInoutStream for reading
        //save changes             :FileOutputStream
        FileOutputStream outputStream=new FileOutputStream(filePath);
