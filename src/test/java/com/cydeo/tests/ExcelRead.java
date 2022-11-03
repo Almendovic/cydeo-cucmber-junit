@@ -55,6 +55,15 @@ public class ExcelRead {
      System.out.println(lastusedRow);
 
 
+     // todo: CReate a logic to print Vinods' name
+         for (int rowNum=0; rowNum<usedRows;rowNum++){
+
+             if(sheet.getRow(rowNum).getCell(0).toString().equals("Vinod")){
+                 System.out.println(sheet.getRow(rowNum).getCell(0));
+             }
+         }
+
+
 
  }
 
